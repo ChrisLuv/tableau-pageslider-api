@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Photographic Composition (and its applications to Data Visualisation)</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="Photographic Composition (and its applications to Data Visualisation)" />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link rel="stylesheet" type="text/css" href="../jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../jquery.pagepiling.min.js"></script>
+		<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['Title', 'Introduction', 'AspectRatio', 'AspectRatioImage','AspectRatioVizDiscussion', 'AspectRatioViz', 'Leadtheviewer', 'Leadtheviewerimage','leadtheviewervizdiscussion', 'leadtheviewerviz', 'simplifythescene', 'simplifythesceneimage','simplifythescenevizdiscuss', 'simplifythesceneviz1','simplifythesceneviz2','selectivecolour', 'selectivecolourimage','selectivecolourvizdiscussion', 'selectivecolourviz','patterns','patternsimage','patternsvizdiscussion','patternsviz','breaktherules'],
+			    sectionsColor: ['white', 'white', 'white', 'white','white', 'white', 'white', 'white','white', 'white', 'white', 'white','white', 'white', 'white', 'white','white', 'white','white','white', 'white','white'],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Title', 'Introduction', 'Aspect Ratio', 'Aspect Ratio: Image','Aspect Ratio: Viz Discussion', 'Aspect Ratio: Viz', 'Lead the Viewer', 'Lead the Viewer: Image','Lead the viewer: Viz Discussion', 'Lead the Viewer: Viz', 'Simplify the Scene', 'Simplify the Scene: Image','Simplify the Scene: Viz Discussion', 'Simplify the Scene: Viz 1', 'Simplify the Scene: Viz 2', 'Selective Colour', 'Selective Colour: Image','Selective Colour: Viz Discussion', 'Selective Colour: Viz','Patterns','Patterns: Image','Patterns: Viz Discussion','Patterns: Viz','Break the Rules']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+
+
+			
+	    });
+    </script>
+
+
+    <style>
+    /* Section 1
+	 * --------------------------------------- */
+	#section1 h1{
+		color: #444;
+	}
+	#section1 h2{
+		line-height: 1.2;
+	}
+	#section1 p{
+	    line-height: 1.2;
+		margin-bottom: 10px;
+		color: #333;
+		color: rgba(0,0,0,0.3);
+	}
+	#section1 img{
+		margin: 20px 0;
+		
+	}
+
+	}
+
+</style>
+
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="Title" class="active"><a href="#title">Welcome</a></li>
+		<li data-menuanchor="Introduction"><a href="#Introduction">Introduction</a></li>
+		<li data-menuanchor="AspectRatio"><a href="#AspectRatio">Aspect Ratio</a></li>
+		<li data-menuanchor="simplifythescene"><a href="#Leadtheviewer">Lead the Viewer</a></li>	
+		<li data-menuanchor="simplifythescene"><a href="#simplifythescene">Simplify the Scene</a></li>
+		<li data-menuanchor="selectivecolour"><a href="#selectivecolour">Selective Colour</a></li>
+		<li data-menuanchor="patterns"><a href="#patterns">Patterns</a></li>
+		<li data-menuanchor="breaktherules"><a href="#breaktherules">Break the Rules</a></li>
+	  
+		</ul>
+
+
+	<div id="pagepiling">
+	     <div class="section" id="section1">
+	    	<div class="intro">
+	    		
+	    		<h2 style='color: #000'>Photographic Composition and Design</h2>
+				<h2 style='color: #000'>and its application to Data Visualisation</h2>
+	    		<h2>by Chris Love</h2>
+				<p style='color: #980000;'>use Mouse Wheel to scroll down </p>
+				<p style='color: #980000;'>(or use arrow keys) </p>
+				<p style='color: #980000;'>and explore</p>
+	      	</div>
+	    </div>
+		 <div class="section" id="section1">
+	    	<div class="intro">
+	    		<h1>Introduction</h1>
+	    		<p>Over the next few pages we will be exploring photographic "rules" and techniques and discussing their application to data visualisations in Tableau. While a lot of these maybe well known to those already familiar with data visualisation best practice I hope seeing them from the viewpoint of another art may help appreciate them in a new way. All of the photographs come from my own portfolio.</p>
+	    		<p>&nbsp;</p>
+				<p>See <a href="http://www.chrislovephotography.co.uk/">my website</a> for other examples of my photography and my <a href="http://public.tableausoftware.com/profile/chrisluv#!/">Tableau Public Gallery</a> for my own Tableau Visualisations.
+				<p>&nbsp;</p>
+				<p>This story board was built using the <a href="http://www.tableausoftware.com/new-features/javascript-api">Tableau Javascript API</a> and <a href="http://alvarotrigo.com/pagePiling/">pagePiling JS Plugin</a>. </p>
+				<a href="http://www.theinformationlab.co.uk"><img src="Partner of the year small.png"  width="207" height="90"/></a>
+			</div>
+	 
+	   </div>
+	   
+	    <div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Aspect Ratio</h2>
+
+				<p><b>What is it?</b> Aspect ratio is the term used to describe the dimensions of an image by comparing the width to the height and expressing it in ratio form.</p>
+				<p><b>Why does it matter?</b> The aspect ratio determines the subjects relationship with the edges of the image; it determines the amount of white space surrounding the image. Choosing the correct ratio in photography helps determine, say, the amount of sky in a landscape, or the amount of space around a portrait.</p>
+<p>In photography, and data visualisation, the first decision we have to make around aspect ratio is often whether to orientate in landscape or portrait. However in data visualisation this is sometimes dictated for us, often by where the resulting image will be displayed - a blog for instance may have certain constraints around the widths of that can be shown.</p>
+<p>Where we can choose, whether for photography or data visualisation, then two things may impact our choice of aspect ratio:</p>
+<p>The amount of data - sometimes our subject is just too big to fit in one orientation;</p>
+<p>The story we're trying to tell - e.g. tall buildings? The amount of sky can show isolation, and can be used in data visualisation to have similar effect, or to show relative sizes / outliers.</p>
+				
+	    	</div>
+	    </div>
+		   
+		   
+	    <div class="section" id="section1">
+	    	<div class="intro">
+	    		<p><b>Image Example:</b> Consider the image below, this dragonfly, a long slender beast, would have looked very different in a landscape orientation. Either the resulting image would have had two large chunks of useless background space either side, or 
+				the subject would need to be rotated at an unnatural angle. The vertical format shows off the full body without any wasted space in the resulting image.</p>
+				
+<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/01/Damselfly-4.jpg" style="height: 500px; width: 333px;">
+	    	</div>
+	    </div>  
+		   	   
+		   
+		<div class="section" id="section1">
+		<div class="intro">
+		<p><b>Viz Example:</b> With Data Visualisation the decisions are a little harder, particularly as decisions about individual worksheets then impact on general dashboard aspect ratio. For example in the visualisation over the page 
+		the vertical aspect ratios of the two components, the chart and text table, are dictated by firstly the labelling: horizontal text fits better on horizontal bars than on vertical bars (unless the bars are made very wide and then take up a lot of space),
+		and secondly the space provided: more text can be fitted in a tall text table than a wide one. Together these two vertical components create a horizontal dashboard. 
+		</div>
+		</div>
+		<div class="section" id="section1">
+
+		
+		<div class='tableauPlaceholder' style='width: 784px; height: 595px;margin-left:auto; margin-right:auto;'><noscript><a href='#'>
+		<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;39&#47;39D63RT23&#47;1_rss.png' style='border: none' /></a>
+		</noscript><object class='tableauViz' width='784' height='595'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> 
+		<param name='path' value='shared&#47;39D63RT23' /> <param name='toolbar' value='yes' />
+		<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;39&#47;39D63RT23&#47;1.png' />
+		<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+		<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+		<param name='showVizHome' value='no' /><param name='showTabs' value='y' /></object></div>
+		<div class="caption">
+		<p>Viz courtesy of Craig Bloodworth of The Information Lab - click <a href="http://public.tableausoftware.com/profile/craig.bloodworth#!/vizhome/USACampaignSpend/RecipientSearch">here</a> to see if on Tableau Public</p>		
+	    </div>
+		</div>
+		
+		<div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Lead the viewer</h2>
+
+				<p><b>What is it?</b> In photography we say good photographs, particularly within landscapes, lead the viewer into the image, be it through the lines within the image itself, which we call leading lines, or via shapes or sizes within the image that similarly guide the eye</p>
+				<p><b>Why does it matter?</b> The human eye as it engages with a photo is a very fickle thing, it will wander across the image looking for a subject; this wandering is random at first, flitting across
+				the image until it finds something of interest. Once it finds something it settles there momentarily, then starts to wander again. With lines, of linked objects if necessary, in a photograph you give the eye things to follow and draws them through the picture naturally, instead of letting the eye wander unsure of where to settle.</P>
+				<p>In a similar way observing the <a href="http://digital-photography-school.com/divine-composition-with-fibonaccis-ratio-the-rule-of-thirds-on-steroids/"><i>golden ratio</i></a> can also help lead the eye through a photograph and create a natural experience for the viewer. </p>
+ 				
+	    	</div>
+	    </div>
+		
+		
+		<div class="section" id="section1">
+	    	<div class="caption">
+	    			<p><b>Image Example:</b> Looking at the image below our eyes, which naturally start on the left, settle on the sweep of the brown heather and are lead by the curve round to the right, curving around and back along the horizon - this draws the viewer back to the main
+					strong image in the piece which is the rock on the left. The way the eyes are allowed to flow over the image feels natural and so the viewer can quickly take it in without the eyes and brain doing too much work. Often this can be the difference between good and bad images.</p>
+ 				<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/01/DSC_0147-for-web.jpg" style="height: 444px; width: 666px;">
+		
+	    	</div>
+	    </div>
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+			
+	    			<p><b>Viz Example:</b> Our eyes look over the Viz over the page in similar way to the previous image, they sweep over the top chart, travel down the right hand side and arrive, as if by magic, at the exact point of interaction. Kelly has clearly thought a lot about the design of this visualisation and how the user will arrive at this point.</p>
+ 			        <p><b>Tip:</b> In designing visualisations take a minute to look at a visualisation from the point of view of a first time viewer, where will their eyes settle, where will the view guide them to. If that isn't where you want them then either change the "leads" through the viz, or at the very least add a help button or pointer to where they should be.</p> 	
+					</div>
+	    </div>
+					<div class="section" id="section1">
+	    	
+				<div class='tableauPlaceholder' style='width: 924px; height: 694px; margin-left:auto; margin-right:auto;'>
+				<noscript><a href='http:&#47;&#47;vizcandy.blogspot.ca&#47;2012&#47;12&#47;will-us-avert-fiscal-cliff.html'>
+				<img alt='the 112th is the Least Productive US Congress in 65 Years  ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;MM&#47;MMXKQGRNC&#47;1_rss.png' style='border: none' /></a></noscript>
+				<object class='tableauViz' width='924' height='694' style='display:none;'>
+				<param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> 
+				<param name='path' value='shared&#47;MMXKQGRNC' /> <param name='toolbar' value='yes' />
+				<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;MM&#47;MMXKQGRNC&#47;1.png' /> 
+				<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+				<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+			<div class="caption">
+			 <p/>
+			<p>Viz courtesy of Kelly Martin of Viz Candy - click <a href="http://public.tableausoftware.com/views/USCongress_0/Congress?:embed=y&:showVizHome=no">here</a> to see it on Tableau Public</p>		
+	  
+			</div>
+	    </div>
+		
+		
+		<div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Simplify the scene</h2>
+
+				<p><b>What is it?</b> This is exactly what it says it is, removing extraneous clutter from the photograph or background, either by changing the viewing angle, or by changing the depth of field to blur the background. Sometimes this is also done in post-processing.</p>
+				<p><b>Why does it matter?</b> Again this is all about what the eye does as it scans over an image, we don't want it distracted by elements that aren't related t the overall composition of the piece. Likewise as we translate this into data visualisation terms then we don't want
+				"chart junk" to distract the viewer from the main analysis.</P>
+				
+	    	</div>
+	    </div>
+		
+		
+		<div class="section" id="section1">
+	    	<div class="caption">
+	    			<p><b>Image Example:</b> The Good. This image has no distracting clutter so the eye is free to settle on the subject, the butterfly takes centre stage. Note that I've also given the subject "room to breathe", and positioned it using the <a href="http://digital-photography-school.com/rule-of-thirds">"rule of thirds"</a>. </p>
+ 				<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/01/Common-Blue.jpg" style="height: 455px; width: 685px;">
+		
+	    	</div>
+	    </div>
+		
+		<div class="section" id="section1">
+	    	<div class="caption">
+	    			<p><b>Image Example:</b> The Bad. Notice this image, while still a nice composition has a distracting twig in the background, this distracts the viewers eye leaving a less pleasing image.</p>
+ 				<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/01/Head-Down.jpg" style="height: 455px; width: 685px;">
+		
+	    	</div>
+	    </div>
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+			
+	    			<p><b>Viz Example:</b> In the superb Viz over the page (sorry for the scroll bar) Steven removes any distractions and shows just the necessary information, with some filters. This leaves the eye free to take in the information offered.</p>
+ 			        <p><b>Tip:</b> Steven has also given the Viz "room to breathe"; by giving the Viz a less squashed-in feeling he creates a pleasant experience for the viewer.</p> 	
+		
+			</div>
+	    </div>
+		<div class="section" id="section1">
+	    	<div class="intro">
+		
+					<div class='tableauPlaceholder' style='width: 874px; height: 500px;margin-left:auto; margin-right:auto;'>'><noscript><a href='http:&#47;&#47;www.tableausoftware.com&#47;public&#47;gallery&#47;adoption-gap'>
+					<img alt='The Adoption Gap ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;N9&#47;N98N8DQGP&#47;1_rss.png' style='border: none' /></a></noscript>
+					<object class='tableauViz' width='874' height='500' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> 
+					<param name='path' value='shared&#47;N98N8DQGP' /> 
+					<param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;N9&#47;N98N8DQGP&#47;1.png' /> 
+					<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+					<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+				    <p/>
+					<p>Viz courtesy of Steven Carter of Monday Morning Viz - click <a href="http://www.tableausoftware.com/public/gallery/adoption-gap">here</a> to see it in full on Tableau Public</p>		
+	  
+					</div>
+	    </div>
+		
+		<div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Selective Colour</h2>
+
+				<p><b>What is it?</b> Selective colour is a post-processing technique which highlights just one or a few colours, leaving the rest in monochrome. The use of selective colour can be a great technique to quickly create a great looking image, in the right circumstances. Highlighting only a certain colour can bring out the parts of the image you want the viewer to focus on.</p>
+				<p><b>Why does it matter?</b> In Data visualisation we can use the same technique to draw the viewers eye to details we want them to focus on, and get them to leave other details in the background</p>
+				
+	    	</div>
+	    </div>
+		
+		
+		<div class="section" id="section1">
+	    	<div class="caption">
+	    			<p><b>Image Example:</b> Here the green background distracted from the detail on the hoverfly, so a change to monochrome with just the colour left in the hoverfly brings out the detail and leaves the viewer to focus on the subject. </p>
+ 				<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/01/Holding-on.jpg" style="height: 455px; width: 682px;">
+		
+	    	</div>
+	    </div>
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+			
+	    			<p><b>Viz Example:</b> In the Viz over the page Matt wants to draw attention to the outliers, so he uses selective colour to highlight only those over 2 s.d. drawing those to the viewers attention.</p>
+ 			        <p><b>Tip:</b> Steven has also given the Viz "room to breathe", by giving the Viz a less squashed-in feeling he creates a pleasant experience for the viewer</p> 	
+					</div>
+	    </div>
+					<div class="section" id="section1">
+	    	<div class="intro">
+
+		
+		<div class='tableauPlaceholder' style='width: 1044px; height: 600px;margin-left:auto; margin-right:auto;'>'><noscript>
+		<a href='http:&#47;&#47;sirvizalot.blogspot.co.uk&#47;2014&#47;09&#47;bigger-faster-stronger.html'>
+		<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;B6&#47;B6WJZXKNM&#47;1_rss.png' style='border: none' />
+		</a></noscript><object class='tableauViz' width='1044' height='600' style='display:none;'>
+		<param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> 
+		<param name='path' value='shared&#47;B6WJZXKNM' /> 
+		<param name='toolbar' value='yes' />
+		<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;B6&#47;B6WJZXKNM&#47;1.png' /> 
+		<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+		<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+				     <p/>
+					<p>Viz courtesy of Matt Chambers (Sir Viz-a-lot) - click <a href="http://www.tableausoftware.com/public/gallery/nfl-combine-1999-2013">here</a> to see it on Tableau Public</p>		
+	  
+					</div>
+	    </div>
+		
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Patterns</h2>
+
+				<p><b>What is it?</b> Our brains love patterns, we look for patterns everywhere, sometimes even where they don't exist. From a photographic point of view repeating patterns can make great photographs. </p>
+				<p><b>Why does it matter?</b> In Data visualisation we can use repeating patterns in our visualisations to show similar trends, or outliers. Small multiples are very effective at showing this.</p>
+				
+	    	</div>
+	    </div>
+		
+		
+		<div class="section" id="section1">
+	    	<div class="caption">
+	    			<p><b>Image Example:</b> In the sea of red the poppys form a blur as the pattern of flowers repeats but in the foreground we can still discern detail giving our eyes some interest in this sea of colour.  </p>
+ 				<img id="fullResImage" src="http://www.chrislovephotography.co.uk/wp-content/uploads/2013/10/DSC_2243.jpg" style="height: 455px; width: 685px;">
+		
+	    	</div>
+	    </div>
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+			
+	    			<p><b>Viz Example:</b> In this Viz I use small multiples to show how different words have changed usgafe, the pattern looks pleasing to the eye but all allows us to focus in on individual details and changes over time.</p>
+ 			       			</div>
+	    </div>
+							
+							<div class="section" id="section1">
+	    	<div class="intro">
+
+		<div class='tableauPlaceholder' style='width: 1193px; height: 600px;margin-left:auto; margin-right:auto;'>'><noscript>
+		<a href='http:&#47;&#47;www.theinformationlab.co.uk&#47;?p=3895'><img alt='Language of Freedom ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;MB&#47;MBNM59HHP&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz' width='1193' height='600' style='display:none;'>
+		<param name='host_url' value='https%3A%2F%2Fpublic.tableausoftware.com%2F' /> 
+		<param name='path' value='shared&#47;MBNM59HHP' /> <param name='toolbar' value='yes' />
+		<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;MB&#47;MBNM59HHP&#47;1.png' /> 
+		<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+		<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+
+				    <p>Viz courtesy of ME! - click <a href="http://www.tableausoftware.com/public/gallery/nfl-combine-1999-2013">here</a> to see it on Tableau Public</p>		
+	  
+					</div>
+	    </div>
+		
+			<div class="section" id="section1">
+	    	<div class="intro">
+	    		<h2>Break the Rules</h2>
+
+				<p><b>What is it?</b> Not sure about all these rules? Just break them, sometimes the best images are the ones that throw out the rule book. </p>
+				<p><b>Why does it matter?</b> You should let your creativity be your guide, not be a slave to a rule book.</p>
+				
+				<p>Thanks for reading. Please let me know your thoughts via Twitter.</p>
+				
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.chrislovephotography.co.uk/tableau/photographyforvisualisations.html" data-text="Photographic Composition and its applications to data visualisation" data-via="ChrisLuv" data-size="large" data-hashtags="tableau">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	    	</div>
+	    </div>
+		
+		
+		
+	</div>
+
+</body>
+</html>
